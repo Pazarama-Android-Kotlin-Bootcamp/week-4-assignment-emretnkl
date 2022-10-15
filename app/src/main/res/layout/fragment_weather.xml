@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.WeatherFragment"
+    android:background="@drawable/gradient_color"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tvCityName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/open_sans"
+        android:textSize="24sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CITY NAME" />
+
+    <ImageView
+        android:id="@+id/ivCurrentWeatherIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCityName"
+        app:srcCompat="?android:attr/textSelectHandleRight"
+         />
+
+    <TextView
+        android:id="@+id/tvWeatherDegree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ivCurrentWeatherIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/open_sans"
+        android:textSize="48sp"
+        android:text="5°"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/llCurrentWeatherAttributes"
+        app:layout_constraintTop_toBottomOf="@id/tvWeatherDegree"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingVertical="8dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/open_sans"
+            android:textStyle="bold"
+            android:text="Humidity"
+            />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingVertical="8dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/open_sans"
+            android:textStyle="bold"
+            android:text="Wind Speed"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCurrentWeatherResponses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/llCurrentWeatherAttributes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvHumidity"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="@font/open_sans"
+            android:text="92%"
+            />
+        <TextView
+            android:id="@+id/tvWindSpeed"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="@font/open_sans"
+            android:text="24 km/h"
+            />
+
+    </LinearLayout>
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toTopOf="@id/llWeathersOfDays"
+    app:layout_constraintStart_toStartOf="parent"
+    android:fontFamily="@font/open_sans"
+    android:layout_marginStart="273dp"
+    android:text="Max"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/llWeathersOfDays"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/open_sans"
+        android:layout_marginStart="333dp"
+        android:text="Min"
+        />
+
+    <LinearLayout
+        android:id="@+id/llWeathersOfDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintTop_toBottomOf="@+id/llCurrentWeatherResponses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/llFirstDay"
+            android:paddingVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvFirstDayName"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:text="First Day" />
+
+            <ImageView
+                android:id="@+id/ivFirstDayIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="45dp"
+                android:layout_gravity="center"
+                app:srcCompat="?android:attr/textSelectHandleLeft"
+                />
+            <TextView
+                android:id="@+id/tvFirstDayMaxDegree"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                tools:text="18°" />
+
+            <TextView
+                android:id="@+id/tvFirstDayMinDegree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans"
+
+                android:textSize="16sp"
+                tools:text="7°" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llSecondDay"
+            android:paddingVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvSecondDayName"
+                android:text="Second Day"
+                android:fontFamily="@font/open_sans"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/ivSecondDayIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="45dp"
+                app:srcCompat="?android:attr/textSelectHandleLeft"
+                />
+            <TextView
+                android:id="@+id/tvSecondDayMaxDegree"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                tools:text="18°" />
+
+            <TextView
+                android:id="@+id/tvSecondDayMinDegree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans"
+                android:textSize="16sp"
+                tools:text="7°" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llThirdDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/tvThirdDayName"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans"
+                android:text="Third Day"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivThirdDayIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="45dp"
+                app:srcCompat="?android:attr/textSelectHandleLeft" />
+
+            <TextView
+                android:id="@+id/tvThirdDayMaxDegree"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="18°" />
+
+            <TextView
+                android:id="@+id/tvThirdDayMinDegree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans"
+                android:textSize="16sp"
+                tools:text="7°" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
