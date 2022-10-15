@@ -1,4 +1,7 @@
 # Week-4-Assignment
+&nbsp;&nbsp;&nbsp;&nbsp; This is Week 4 Assignment of the Pazarama Android Bootcamp. Libraries like Retrofit, Glide and Navigation Component has been used in this project. 
+
+![Alt text](https://github.com/Pazarama-Android-Kotlin-Bootcamp/week-4-assignment-emretnkl/blob/main/ssWeatherFragment.png)
 
 1. https://openweathermap.org/api kullanılarak bir hava durumu uygulaması geliştirilecektir. 2. https://marvelapp.com/prototype/70f2bha/screen/78478137 Buradan mockup ekranlarına bakabilirsiniz.
 3. OpenWeatherMap’ten alınan API key’in girildiği ekran. Sonraki sayfada çağrılacak hava durumu web servisi bu API key değerini kullanacaktır.
